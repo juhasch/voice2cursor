@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice2cursor"
+version = "0.1.0"
+description = "Transcribe voice to text and send it to the Cursor editor chat."
+authors = [{ name = "Your Name", email = "you@example.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    "pyaudio",
+    "openai",
+    "pyperclip",
+    "pyautogui",
+    "torch",
+    "torchaudio",
+    "numpy",
+    "openai-whisper",
+    "rumps",
+    "pyyaml",
+    "pydantic",
+    "click"
+]
+
+[project.scripts]
+voice2cursor = "voice2cursor.main:main_cli"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+    "coverage"
+]

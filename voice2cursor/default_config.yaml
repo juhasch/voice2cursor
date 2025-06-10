@@ -1,0 +1,19 @@
+# Default configuration for voice2cursor
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  chunk_size: 512
+  format: 'paInt16'
+
+vad:
+  threshold: 0.5
+  min_speech_duration_ms: 100
+  min_silence_duration_ms: 1000
+
+whisper:
+  model: 'base.en'
+
+paste_delay: 0.2
+
+stopword: 'stop' 
